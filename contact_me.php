@@ -19,4 +19,9 @@ $header .= "Reply-To: $email";
 
 if(!mail($to, $subject, $body, $header))
   http_response_code(500);
+
+//Validate that the message was sent
+ if(isset($email)){
+  echo 'Success! Thanks for submitting';
+}
 ?>
